@@ -6,4 +6,7 @@ router.get('/', function(req, res, next) {
   res.json({message: "homepage reached"});
 });
 
+/* GET published blogposts. */
+router.get("/", )
+
 module.exports = router;
