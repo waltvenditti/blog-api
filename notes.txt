@@ -1,3 +1,14 @@
 Fields for posts and comments:
 - Posts: title, date/time published, content, published or not (can save as drafts)
 - Comments: name(optional), date/time, content
+
+
+API Structure
+=============
+remember that parameters (/:<param>/) are stored in req.params.<your-paramater>
+
+/posts
+/posts/unpublished
+/post/:postid
+/post/:postid/comments
+/post/:postid/comment/:commentid

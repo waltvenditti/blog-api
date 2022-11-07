@@ -7,8 +7,6 @@ require("dotenv").config();
 // process.env.<variable_name>
 
 var indexRouter = require('./routes/index');
-const publishRouter = require("./routes/publish");
-const commentRouter = require("./routes/comment");
 //var usersRouter = require('./routes/users');
 
 var app = express();
@@ -31,8 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use("/publish", publishRouter);
-app.use("/comment", commentRouter);
 //app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
