@@ -7,8 +7,12 @@ API Structure
 =============
 remember that parameters (/:<param>/) are stored in req.params.<your-paramater>
 
-/posts
-/posts/unpublished
-/post/:postid
-/post/:postid/comments
-/post/:postid/comment/:commentid
+Admin Frontend
+==============
+GET:/posts - get all posts
+GET:/posts/unpublished - get all drafts
+GET:/post/:postid - get particular post or draft (and comments)
+PUT:/post/:postid - edit post or draft (including publish draft)
+DELETE:/post/:postid - delete post or draft
+PUT:/comment/:commentid - edit comment
+DELETE:/comment:commentid - delete comment
