@@ -13,7 +13,7 @@ var app = express();
 
 
 const mongoose = require("mongoose");
-const mongoDB = `mongodb+srv://${process.env.MDBusername}:${process.env.MDBpassword}@cluster0.ujaqqyn.mongodb.net/?retryWrites=true&w=majority`;
+const mongoDB = `mongodb+srv://${process.env.MDBusername}:${process.env.MDBpassword}@cluster0.ujaqqyn.mongodb.net/blog_api?retryWrites=true&w=majority`;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
