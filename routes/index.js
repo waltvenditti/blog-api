@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+// Controller modules
+const index_controller = require("../controllers/indexController");
+
 /* GET home page. */
-router.get("/", function(req, res, next) {
-  res.json({message: "homepage reached"});
-});
+router.get("/", index_controller.home_get);
 
 // GET all posts (published)
 router.get("/posts", (req, res, next) => {
