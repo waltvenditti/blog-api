@@ -8,38 +8,24 @@ const index_controller = require("../controllers/indexController");
 router.get("/", index_controller.home_get);
 
 // GET all posts (published)
-router.get("/posts", (req, res, next) => {
-  res.json({message: "controller for GET ALL POSTS still under construction."});
-});
+router.get("/articles", index_controller.articles_get);
 
 // GET all unpublished drafts
-router.get("/posts/unpublished", (req, res, next) => {
-  res.json({message: "controller for GET ALL DRAFTS still under construction."});
-});
+router.get("/drafts", index_controller.drafts_get);
 
 // GET specific post
-router.get("/post/:postid", (req, res, next) => {
-  res.json({message: `controller for GET POST-ID#${req.params.postid} still under construction.`});
-});
+router.get("/article/:articleid", index_controller.article_get);
 
 // PUT(edit) specific post including publish draft
-router.put("/post/:postid", (req, res, next) => {
-  res.json({message: `controller for EDIT POST-ID#${req.params.postid} still under construction.`});
-});
+router.put("/article/:articleid", index_controller.article_put);
 
 // DELETE specific post
-router.delete("/post/:postid", (req, res, next) => {
-  res.json({message: `controller for DELETE POST-ID#${req.params.postid} still under construction.`});
-});
+router.delete("/article/:articleid", index_controller.article_delete);
 
 // PUT comment
-router.put("/comment/:commentid", (req, res, next) => {
-  res.json({message: `controller for EDIT COMMENT-ID#${req.params.commentid} still under construction. `})
-});
+router.put("/comment/:commentid", index_controller.comment_edit);
 
 // DELETE comment
-router.delete("/comment/:commentid", (req, res, next) => {
-  res.json({message: `controller for DELETE COMMENT-ID#${req.params.commentid} still under construction. `})
-});
+router.delete("/comment/:commentid", index_controller.comment_delete);
 
 module.exports = router;
